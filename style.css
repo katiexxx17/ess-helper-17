@@ -1,0 +1,144 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: rgb(47, 47, 47);
+}
+
+header {
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    letter-spacing: 2px;
+    position: relative;
+    display: flex;
+    background: rgba(0, 0, 0, 0.712);
+    height: 100px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a:hover{
+    color: #ff0000;
+}
+nav ul li a:active{
+    color: #820000;
+}
+
+nav ul li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.otygrvka {
+    margin-bottom: 10px;
+}
+
+.title {
+    cursor: pointer;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.445);
+    height: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 10px;
+}
+.title-2-mo {
+    cursor: pointer;
+    color: #ffffff;
+    background: linear-gradient(
+        to right, #00000000, #00000034, #000000a3);
+    height: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.title-2-mo:hover {
+    color: #ff0000;
+}
+.title-2-mo:active {
+    color: #820000;
+}
+
+.title-2-mcs {
+    cursor: pointer;
+    color: #ffffff;
+    background: linear-gradient(
+        to right, #00000000, #00000034, #000000a3);
+    height: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 10px;
+}
+.title-2-mcs:hover {
+    color: #ff0000;
+}
+.title-2-mcs:active {
+    color: #820000;
+}
+
+h2 {
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.title:hover {
+    color: #ff0000;
+}
+
+.info {
+    border-radius: 10px;
+    padding: 5px;
+    color: white;
+    display: none;
+    margin-top: 5px;
+    background: rgba(0, 0, 0, 0.322);
+    font-size: 14px;
+}
+.info-all {
+    display: none;
+}
+
+.pod-title {
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: rgb(255, 69, 69);
+}
+
+.narkoz {
+    color: rgb(255, 130, 130);
+    font-style: italic;
+    font-weight: 600;
+}
