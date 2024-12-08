@@ -152,3 +152,7 @@ h2 {
 .ustav h2 {
     color: rgb(255, 0, 0);
 }
+
+.ustav p {
+    margin-left: 10px;
+}
