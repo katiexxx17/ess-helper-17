@@ -36,3 +36,10 @@ document.getElementsByClassName('open-cat').addEventListener('click', function()
         reqs.style.display = 'none'; // Можно добавить возможность скрыть обратно
     }
 });
+
+document.querySelectorAll('.title').forEach(item => {
+    item.addEventListener('click', () => {
+        const info = item.nextElementSibling;
+        info.style.display = info.style.display === 'none' || info.style.display === '' ? 'block' : 'none';
+    });
+});
