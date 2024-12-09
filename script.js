@@ -43,3 +43,5 @@ document.querySelectorAll('.title').forEach(item => {
         info.style.display = info.style.display === 'none' || info.style.display === '' ? 'block' : 'none';
     });
 });
+
+// --------------------------------------------------------------------

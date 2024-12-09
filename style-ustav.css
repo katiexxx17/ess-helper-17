@@ -70,7 +70,10 @@ main {
     cursor: pointer;
     color: #ffffff;
     background: linear-gradient(
-        to right, #00000000, #00000034, #000000a3);
+        to right, 
+        #00000000, 
+        #00000034, 
+        #000000a3);
     height: 50px;
     position: relative;
     display: flex;
