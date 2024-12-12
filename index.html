@@ -65,14 +65,52 @@
     </div>
 <!-- ---------------------------------------------------------------------------------- -->
     <script>
-        const validCodes = ['7f6fg6fd8sd9vfds78f5g89sfa7a', 'k45hjk534nfu35n4in43q53ewo3k', '5g87yhf84823fhd7q2d7qw2cx93z']; // Замените на ваши коды
+        //const validCodes = ['7f6fg6fd8sd9vfds78f5g89sfa7a', 'k45hjk534nfu35n4in43q53ewo3k', '5g87yhf84823fhd7q2d7qw2cx93z']; // Замените на ваши коды
+        //const submitButton = document.getElementById('submit-button');
+        //const codeInput = document.getElementById('code-input');
+
+        //submitButton.addEventListener('click', function() {
+        //    const enteredCode = codeInput.value;
+
+        //    if (validCodes.includes(enteredCode)) {
+        //        window.location.href = 'otigrovki.html'; // Перенаправление на index.html
+        //    } else {
+        //        alert('Неверный код. Попробуйте снова.');
+        //    }
+        //});
+        const validCodes = ['123', '234', '345']; // Замените на ваши коды
         const submitButton = document.getElementById('submit-button');
         const codeInput = document.getElementById('code-input');
+
+        // Функция для проверки, истек ли срок действия кода
+        function isCodeValid() {
+            const storedData = localStorage.getItem('accessCode');
+            if (storedData) {
+                const { code, timestamp } = JSON.parse(storedData);
+                const currentTime = new Date().getTime();
+                const threeDaysInMilliseconds = 3 * 24 * 60 * 60 * 1000; // 3 дня
+
+                // Проверяем, истек ли срок действия кода
+                return validCodes.includes(code) && (currentTime - timestamp < threeDaysInMilliseconds);
+            }
+            return false;
+        }
+
+        // Проверяем, если код уже введен и еще действителен
+        if (isCodeValid()) {
+            window.location.href = 'otigrovki.html'; // Перенаправление на index.html
+        }
 
         submitButton.addEventListener('click', function() {
             const enteredCode = codeInput.value;
 
             if (validCodes.includes(enteredCode)) {
+                // Сохраняем код и текущее время в localStorage
+                const dataToStore = {
+                    code: enteredCode,
+                    timestamp: new Date().getTime()
+                };
+                localStorage.setItem('accessCode', JSON.stringify(dataToStore));
                 window.location.href = 'otigrovki.html'; // Перенаправление на index.html
             } else {
                 alert('Неверный код. Попробуйте снова.');
